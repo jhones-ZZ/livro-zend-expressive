@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'doctrine' => [
+        'connection' => [
+            'orm' => [
+                'auto_generate_proxy_classes' => true,
+                'proxy_dir'                   => 'data/cache/Proxy',
+                'proxy_namespace'             => 'Proxy',
+                'underscore_naming_strategy'  => true,
+            ],
+            'orm_default' => [
+                'driverClass' => Doctrine\DBAL\Driver\PDOMySql\Driver::class,
+                'host' => 'localhost',
+                'port' => 3306,
+                'user' => 'root',
+                'password' => '123456',
+                'dbname' => 'livro_zend_expressive_db',
+                'driverOptions' => [
+                    \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"
+                ]
+            ],
+        ],
+    ]
+];
