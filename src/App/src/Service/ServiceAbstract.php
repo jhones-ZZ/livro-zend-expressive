@@ -99,14 +99,14 @@ abstract class ServiceAbstract
         try {
             $entity = new $this->entity();
 
-            $classMethods = new ClassMethods();
+            $classMethods = new ClassMethods();			
             $classMethods->hydrate($data, $entity);
-
-            $this->em->persist($entity);
+			
+            $this->em->persist($entity);			
             $this->em->flush();
-
+	
             return $entity->toArray();
-        } catch (\Exception $e) {
+        } catch (\Exception $e) {					
             throw $e;
         }
     }
