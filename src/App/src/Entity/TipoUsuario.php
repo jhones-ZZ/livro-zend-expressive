@@ -38,7 +38,7 @@ class TipoUsuario
 0 - Não
 1 - Sim"})
      */
-    private $ativo = '1';
+    private $ativo = true;
 
     /**
      * @var \DateTime
