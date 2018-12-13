@@ -33,7 +33,8 @@ class UsuarioRepository extends EntityRepository implements RepositoryInterface
      */
     public function getOne(int $id)
     {
-        return $this->findOneBy(['id' => $id])->toArray();
+        $entity = $this->findOneBy(['id' => $id]);
+        return $entity ? $entity->toArray() : [];
     }
 
     /**
